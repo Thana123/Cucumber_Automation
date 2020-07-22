@@ -18,20 +18,6 @@ import cucumber.api.java.en.When;
 public class SelSubs {
 
 	private MonthlySubs subsPage;
-	private SparkSportsHomepage hPage;
-	
-	@Given("^At the home page https://www\\.sparksport\\.co\\.nz/$")
-	public void at_the_home_page_https_www_sparksport_co_nz() throws Throwable {
-		ObjectRepo.driver.get(ObjectRepo.reader.getWebsite());
-		subsPage = new MonthlySubs(ObjectRepo.driver);
-		ObjectRepo.data.put("HomePage", subsPage);
-	}
-
-	@When("^Click on  signup$")
-	public void click_on_signup(String subPtitle) throws Throwable {
-		hPage.sigUp();
-		Assert.assertTrue(hPage.checkForTitle(subPtitle));
-	}
 
 	@Then("^select sevenday free trial$")
 	public void select_sevenday_free_trial() throws Throwable {

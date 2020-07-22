@@ -25,27 +25,27 @@ public class HmPage {
 	}
 
 	@When("^Click on  login$")
-	public void click_on_login(String ltitle ) throws Throwable {
+	public void click_on_login() throws Throwable {
 		hPage.login();
-		Assert.assertTrue(hPage.checkForTitle(ltitle));
+
 	}
 
 	@When("^Click on  signup$")
-	public void click_on_signup(String sigtitle) throws Throwable {
+	public void click_on_signup() throws Throwable {
 		hPage.sigUp();
-		Assert.assertTrue(hPage.checkForTitle(sigtitle));
+	
 	}
 
 	@When("^Click on  discover$")
-	public void click_on_discover(String dtitle) throws Throwable {
+	public void click_on_discover() throws Throwable {
 		hPage.disCov();
-		Assert.assertTrue(hPage.checkForTitle(dtitle));
+	
 	}
 
 	@When("^Click on  LearnMore$")
-	public void click_on_LearnMore(String llrntitle) throws Throwable {
+	public void click_on_LearnMore() throws Throwable {
 		hPage.learnMr();
-		Assert.assertTrue(hPage.checkForTitle(llrntitle));
+
 	}
 
 }

@@ -1,7 +1,5 @@
 Feature: Spark Demo
-
-
-    
+   
   Scenario: select Sevenday Free trial
     Given At the home page https://www.sparksport.co.nz/
     When Click on  signup

@@ -23,18 +23,6 @@ public class SignupPg {
 	private SparkSportsSignUppage signupPage;
 	private MonthlySubs subsPage;
 	
-	@Given("^At the home page https://www\\.sparksport\\.co\\.nz/$")
-	public void at_the_home_page_https_www_sparksport_co_nz() throws Throwable {
-		ObjectRepo.driver.get(ObjectRepo.reader.getWebsite());
-		signupPage = new SparkSportsSignUppage(ObjectRepo.driver);
-		ObjectRepo.data.put("HomePage", signupPage);
-	}
-
-	@When("^Click on  Signup$")
-	public void click_on_Signup(String sigtitle ) throws Throwable {
-		hPage.sigUp();
-		Assert.assertTrue(hPage.checkForTitle(sigtitle));
-	}
 
 	@Then("^Select seven days free trial subscription$")
 	public void select_days_free_trial_subscription(int arg1) throws Throwable {
@@ -57,12 +45,5 @@ public class SignupPg {
 	    
 	}
 
-	@Then("^Select voucher subscription$")
-	public void select_voucher_subscription() throws Throwable {
-		subsPage.useVouch();
-		Assert.assertTrue(subsPage.checkForTitle("https://www.sparksport.co.nz/signup/1"));
-	}
 
-
-	
 }

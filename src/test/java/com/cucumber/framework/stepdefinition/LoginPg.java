@@ -19,20 +19,6 @@ import cucumber.api.java.en.When;
 public class LoginPg {
 
 	private SparkSportsLoginpage LoginPage;
-	private SparkSportsHomepage hPage;
-	
-	@Given("^At the home page https://www\\.sparksport\\.co\\.nz/$")
-	public void at_the_home_page_https_www_sparksport_co_nz() throws Throwable {
-		ObjectRepo.driver.get(ObjectRepo.reader.getWebsite());
-		LoginPage = new SparkSportsLoginpage(ObjectRepo.driver);
-		ObjectRepo.data.put("HomePage", LoginPage);
-	}
-
-	@When("^Click on  login$")
-	public void click_on_login(String ltitle) throws Throwable {
-		hPage.login();
-		Assert.assertTrue(hPage.checkForTitle(ltitle));
-	}
 
 	@Then("^Login with username and password$")
 	public void login_with_username_and_password(DataTable usercredentials) throws Throwable {
@@ -43,9 +29,9 @@ public class LoginPg {
 	}
 
 	@When("^Click on  forgot password$")
-	public void click_on_forgot_password(String reqpasstitle) throws Throwable {
+	public void click_on_forgot_password() throws Throwable {
 		LoginPage.frgtPasswrd();
-		Assert.assertTrue(LoginPage.checkForTitle(reqpasstitle));
+
 	}
 
 	@Then("^Request new Password$")
