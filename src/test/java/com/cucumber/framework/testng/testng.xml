@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener
+			class-name="com.cucumber.framework.listeners.reportlistener.CucumberReport" />
+	</listeners>
+	<test name="Test - 1">
+		<classes>
+			<class name="com.cucumber.framework.runner.HomePage" />
+			<class name="com.cucumber.framework.runner.LoginPage" />
+			<class name="com.cucumber.framework.runner.SelectSubscriptionPage" />
+			<class name="com.cucumber.framework.runner.SignUpPage" />
+		</classes>
+	</test>
+</suite> 
